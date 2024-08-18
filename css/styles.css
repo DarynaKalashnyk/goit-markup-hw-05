@@ -507,6 +507,15 @@ img {
   gap: 24px;
 }
 
+.footer-form-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: #ffffff;
+
+}
 .footer-label {
   font-weight: 500;
     font-size: 16px;
@@ -569,9 +578,8 @@ position: relative;
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    pointer-events 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -583,6 +591,11 @@ position: relative;
   min-height: 584px;
   background-color: #fff;
   padding: 24px;
+  background: #fcfcfc;
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .backdrop.is-open {
@@ -635,7 +648,7 @@ position: relative;
 .modal-form-label {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
@@ -652,8 +665,9 @@ position: relative;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding-left: 38px;
-  outline: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  outline: transparent;
 }
 .modal-input:focus {
   border-color: #4d5ae5;
@@ -696,9 +710,13 @@ position: relative;
   border-radius: 4px;
   width: 360px;
   height: 120px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
   resize: none;
-  outline: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea::placeholder {
@@ -724,17 +742,20 @@ position: relative;
   justify-content: center;
   align-items: center;
   margin-right: 8px;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox:checked + .custom-label-user-checkbox > .custom-checkbox {
   border-color: transparent;
   background-color: #404bbf;
   fill: #f4f4fd;
+  border: none;
 }
 .custom-label-user-checkbox {
   cursor: pointer;
   font-weight: 400;
     font-size: 12px;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
 }
@@ -757,6 +778,7 @@ position: relative;
         padding: 16px 32px;
         min-width: 169px;
         height: 56px;
+        cursor: pointer;
         border: none;
         display: block;
         margin-right: auto;
