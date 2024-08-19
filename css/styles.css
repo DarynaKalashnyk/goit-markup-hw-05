@@ -499,6 +499,7 @@ img {
 }
 .footer-icon {
   fill: #f4f4fd;
+  margin-left: 16px;
 }
 
 .footer-form {
@@ -540,6 +541,7 @@ position: relative;
     background-color: transparent;
     padding-left: 16px;
   color: #ffffff;
+  line-height: 2;
 }
 
 .footer-input::placeholder {
@@ -624,8 +626,8 @@ position: relative;
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal-close-btn:hover > svg,
+.modal-close-btn:focus > svg {
   background-color: #404bbf;
   fill: #ffffff;
   border: none;
@@ -649,11 +651,11 @@ position: relative;
 .modal-form-label {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
   margin-bottom: 4px;
+  line-height: 1.17;
 }
 
 .modal-cont-input {
